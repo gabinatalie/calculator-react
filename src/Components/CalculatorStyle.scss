@@ -1,0 +1,101 @@
+// Variáveis de cores
+$color-background: whitesmoke;
+$color-primary: #ff611e;
+$color-secondary: #ffac2d;
+$color-tertiary: #e1dbdb;
+$color-wrapper-bg: #0f2b92;
+$color-text-shadow: #0f2b92;
+$color-text-result: white;
+
+// Variáveis de tipografia
+$font-family: Verdana, Geneva, Tahoma, sans-serif;
+$font-size-large: 3rem;
+$font-size-medium: 1.5em;
+$font-size-result: 3.5em;
+
+// Variáveis de botões
+$button-size: 3em;
+$button-radius: 3em;
+$button-margin: 0.2em;
+$button-shadow: 1px 1px 2px black;
+
+// Estilos globais
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: $color-background;
+  height: 150vh;
+}
+
+h1 {
+  justify-content: center;
+  display: flex;
+  padding: 3rem;
+  font-size: $font-size-large;
+  font-family: $font-family;
+  color: $color-primary;
+  text-shadow: 2px 2px 3px $color-text-shadow;
+}
+
+button {
+  width: $button-size;
+  height: $button-size;
+  font-size: $font-size-medium;
+  border: none;
+  border-radius: $button-radius;
+  margin: $button-margin;
+  color: white;
+  font-family: $font-family;
+  box-shadow: $button-shadow;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.wrapper {
+  background-color: $color-wrapper-bg;
+  border-radius: 1em;
+  padding: 1.5em;
+}
+
+.operator-btn {
+  background-color: $color-primary;
+}
+
+.lighter-btn {
+  background-color: $color-secondary;
+}
+
+.num-btn {
+  background-color: $color-tertiary;
+}
+
+.result {
+  color: $color-text-result;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5em;
+  font-size: $font-size-result;
+  margin: 0.5em 0.3em;
+  font-family: $font-family;
+}
+
+.fake-btn {
+  visibility: hidden;
+}
+
+// Media Queries para dispositivos menores
+@media (max-width: 600px) {
+  h1 {
+    padding: 1rem;
+  }
+
+  .wrapper {
+    padding: 1rem;
+  }
+}
